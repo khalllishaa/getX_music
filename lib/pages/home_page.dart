@@ -12,8 +12,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Connect UI to controller
-    final BottomNavCtr bottomNavCtr = Get.put(BottomNavCtr());
+    // Connect UI to controller pake binding
+    final BottomNavCtr bottomNavCtr = Get.find();
 
     // Define the list of menus
     final List<Widget> menus = [

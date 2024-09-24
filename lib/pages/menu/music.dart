@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:getx_music/reused/album.dart';
 import 'package:getx_music/reused/circle.dart';
 import 'package:getx_music/reused/color.dart';
 import 'package:getx_music/reused/login.dart';

@@ -23,9 +23,9 @@ class LoginPage extends StatelessWidget {
                   Text(
                     'Yumi',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: colorFont
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: colorFont
                     ),
                   )
                 ],
@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 50),
             ElevatedButton(
               onPressed: () {
-                Get.toNamed('homepage');
+                Get.toNamed('/home'); // Pastikan routing ke '/home'
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: colorBackground,
