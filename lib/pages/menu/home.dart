@@ -12,14 +12,15 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 30),
           // Header section
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ProfilePicture(
-                  imagePath: 'assets/music.jpg',
+                  imagePath: 'assets/profile.jpeg',
                   size: 50.0,
                 ),
                 SizedBox(width: 20),
@@ -69,7 +70,7 @@ class Home extends StatelessWidget {
                     SizedBox(width: 10),
                     Expanded(
                       child: Explore(
-                        imagePath: 'assets/xxt.jpeg',
+                        imagePath: 'assets/juice.jpeg',
                         text: 'Lil Peep',
                         height: 70.0,
                         width: 190.0,
@@ -82,7 +83,7 @@ class Home extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Explore(
-                        imagePath: 'assets/xxt.jpeg',
+                        imagePath: 'assets/juice.jpeg',
                         text: 'Juice WRLD',
                         height: 70.0,
                         width: 190.0,
@@ -113,7 +114,7 @@ class Home extends StatelessWidget {
                     SizedBox(width: 10),
                     Expanded(
                       child: Explore(
-                        imagePath: 'assets/xxt.jpeg',
+                        imagePath: 'assets/juice.jpeg',
                         text: 'ASAP Rocky',
                         height: 70.0,
                         width: 190.0,
@@ -128,7 +129,7 @@ class Home extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left: 15.0),
+              padding: const EdgeInsets.only(left: 10.0),
               child: Text(
                 'Made For You',
                 style: TextStyle(
@@ -145,6 +146,7 @@ class Home extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
+                  SizedBox(width: 5),
                   ImageBox(
                     imagePath: 'assets/xxt.jpeg',
                     text: 'My World 2.0',
@@ -153,7 +155,7 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(width: 15),
                   ImageBox(
-                    imagePath: 'assets/xxt.jpeg',
+                    imagePath: 'assets/juice.jpeg',
                     text: 'The Wizard Liz',
                     subText: 'The Wizard Liz',
                     size: 150.0,
@@ -167,7 +169,7 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(width: 15),
                   ImageBox(
-                    imagePath: 'assets/xxt.jpeg',
+                    imagePath: 'assets/juice.jpeg',
                     text: 'Cry Baby',
                     subText: 'Lil Peep',
                     size: 150.0,

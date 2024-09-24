@@ -69,7 +69,7 @@ class Search extends StatelessWidget {
                     ),
                     SizedBox(width: 15),
                     ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
+                      imagePath: 'assets/juice.jpeg',
                       text: 'The Wizard Liz',
                       subText: 'The Wizard Liz',
                       size: 150.0,
@@ -83,7 +83,7 @@ class Search extends StatelessWidget {
                     ),
                     SizedBox(width: 15),
                     ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
+                      imagePath: 'assets/juice.jpeg',
                       text: 'Cry Baby',
                       subText: 'Lil Peep',
                       size: 150.0,
@@ -124,7 +124,7 @@ class Search extends StatelessWidget {
                         SizedBox(width: 10),
                         Expanded(
                           child: Explore(
-                            imagePath: 'assets/xxt.jpeg',
+                            imagePath: 'assets/juice.jpeg',
                             text: 'Lil Peep',
                             height: 70.0,
                             width: 190.0,
@@ -137,7 +137,7 @@ class Search extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Explore(
-                            imagePath: 'assets/xxt.jpeg',
+                            imagePath: 'assets/juice.jpeg',
                             text: 'Juice WRLD',
                             height: 70.0,
                             width: 190.0,
@@ -177,7 +177,7 @@ class Search extends StatelessWidget {
                 child: Row(
                   children: [
                     ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
+                      imagePath: 'assets/juice.jpeg',
                       text: 'My World 2.0',
                       subText: 'Justin Bieber',
                       size: 150.0,
@@ -191,7 +191,7 @@ class Search extends StatelessWidget {
                     ),
                     SizedBox(width: 15),
                     ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
+                      imagePath: 'assets/juice.jpeg',
                       text: 'Dongeng Tidur',
                       subText: 'Irene Evita & Kukila',
                       size: 150.0,
