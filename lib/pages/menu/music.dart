@@ -14,14 +14,14 @@ class Collection extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 30),
+          SizedBox(height: 48),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ProfilePicture(
-                  imagePath: 'assets/music.jpg',
+                  imagePath: 'assets/profile.jpeg',
                   size: 50.0,
                 ),
                 SizedBox(width: 20),
@@ -55,7 +55,7 @@ class Collection extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -102,25 +102,19 @@ class Collection extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
                   icon: Icon(Icons.history, color: colorFont, size: 20),
                   onPressed: () {},
                 ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Recently',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: colorFont,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
+                Text(
+                  'Recently',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: colorFont,
+                    fontWeight: FontWeight.normal,
                   ),
                 ),
               ],
@@ -128,19 +122,20 @@ class Collection extends StatelessWidget {
           ),
           Column(
             children: [
+              SizedBox(height: 5, width: 10),
               SongItem(
                   imagePath: 'assets/xxt.jpeg',
-                  title: 'Another Song',
-                  subtitle: 'Playlist • khal',
+                  title: 'Your Favourite Song',
+                  subtitle: '150 songs',
+                  size: 120),
+              SongItem(
+                  imagePath: 'assets/juice.jpeg',
+                  title: 'Lucid Dreams',
+                  subtitle: 'Juice WRLD • Album',
                   size: 120),
               SongItem(
                   imagePath: 'assets/xxt.jpeg',
-                  title: 'Another Song',
-                  subtitle: 'Playlist • khal',
-                  size: 120),
-              SongItem(
-                  imagePath: 'assets/xxt.jpeg',
-                  title: 'Another Song',
+                  title: 'then',
                   subtitle: 'Playlist • khal',
                   size: 120),
             ],

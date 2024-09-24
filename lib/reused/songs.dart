@@ -20,6 +20,7 @@ class SongItem extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(width: 10),
         ImageBox(
           imagePath: imagePath!,
           text: '',
@@ -28,6 +29,7 @@ class SongItem extends StatelessWidget {
         ),
         SizedBox(width: 10),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               title,
