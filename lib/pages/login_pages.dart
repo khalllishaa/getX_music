@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 50),
             ElevatedButton(
               onPressed: () {
-                Get.toNamed('/home'); // Pastikan routing ke '/home'
+                Get.toNamed('/register');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: colorBackground,
