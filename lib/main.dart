@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_music/binding/binding.dart';
 import 'package:getx_music/pages/home_page.dart';
-import 'package:getx_music/pages/login_pages.dart'; // Pastikan halaman login di-import
+import 'package:getx_music/pages/login_pages.dart';
+import 'package:getx_music/pages/register.dart';
+import 'package:getx_music/pages/splashscreen.dart';
 import 'package:getx_music/reused/color.dart';
 
 void main() {
@@ -16,11 +18,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/', // Set initial route ke halaman login
+      initialRoute: '/splash',
       getPages: [
         GetPage(
+          name: '/splash',
+          page: () => SplashScreen(),
+        ),
+        GetPage(
           name: '/',
-          page: () => const LoginPage(),
+          page: () => LoginPage(),
+        ),
+        GetPage(
+          name: '/register',
+          page: () => RegisterPage(),
         ),
         GetPage(
           name: '/home',
@@ -28,6 +38,7 @@ class MyApp extends StatelessWidget {
           binding: Appbinding(),
         ),
       ],
+
       theme: ThemeData(
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: colorBottom,
