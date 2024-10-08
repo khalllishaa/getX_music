@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_music/pages/xxt.dart';
 import 'package:getx_music/reused/album.dart';
 import 'package:getx_music/reused/circle.dart';
 import 'package:getx_music/reused/color.dart';
@@ -60,11 +62,16 @@ class Home extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Explore(
-                        imagePath: 'assets/xxt.jpeg',
-                        text: 'XXXTENTACION',
-                        height: 70.0,
-                        width: 190.0,
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => XXXTENTACIONPage()); // Pindah ke halaman XXXTENTACION
+                        },
+                        child: Explore(
+                          imagePath: 'assets/xxt.jpeg',
+                          text: 'XXXTENTACION',
+                          height: 70.0,
+                          width: 190.0,
+                        ),
                       ),
                     ),
                     SizedBox(width: 10),
