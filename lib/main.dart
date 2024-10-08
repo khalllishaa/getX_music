@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_music/TaskController.dart';
 import 'package:getx_music/binding/binding.dart';
 import 'package:getx_music/pages/home_page.dart';
 import 'package:getx_music/pages/login_pages.dart';
@@ -8,6 +9,7 @@ import 'package:getx_music/pages/splashscreen.dart';
 import 'package:getx_music/reused/color.dart';
 
 void main() {
+  Get.put(TaskController());
   runApp(const MyApp());
 }
 

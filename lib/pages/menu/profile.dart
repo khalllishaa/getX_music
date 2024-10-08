@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getx_music/reused/circle.dart';
 import 'package:getx_music/reused/color.dart';
-import 'package:getx_music/reused/song.dart';
+import 'package:getx_music/reused/songs.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -94,13 +94,13 @@ class Profile extends StatelessWidget {
                     imagePath: 'assets/xxt.jpeg',
                     title: 'Everybody Dies In Their Nightmares',
                     subtitle: 'xxxtentacion',
-                    size: 50
+                    size: 50, onTap: () {  },
                 ),
                 SongItem(
                     imagePath: 'assets/juice.jpeg',
                     title: 'All the girls are same',
                     subtitle: 'Juice WRLD',
-                    size: 50
+                    size: 50, onTap: () {  },
                 ),
               ],
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_music/pages/favMusic.dart';
 import 'package:getx_music/reused/circle.dart';
 import 'package:getx_music/reused/color.dart';
 import 'package:getx_music/reused/login.dart';
@@ -121,22 +123,33 @@ class Collection extends StatelessWidget {
           ),
           Column(
             children: [
-              SizedBox(height: 5, width: 10),
+              Container(
+                child: InkWell(
+                  onTap: () {
+                    Get.to(() => FavMusic()); // Pindah ke halaman XXXTENTACION
+                  },
+                  child: SongItem(
+                    imagePath: 'assets/xxt.jpeg',
+                    title: 'Your Favourite Song',
+                    subtitle: 'playlist',
+                    size: 120,
+                    showBookmark: false,
+                    onTap: () {
+                      Get.to(FavMusic());
+                    },
+                  ),
+                ),
+              ),
               SongItem(
-                  imagePath: 'assets/xxt.jpeg',
-                  title: 'Your Favourite Song',
-                  subtitle: '150 songs',
-                  size: 120),
-              SongItem(
-                  imagePath: 'assets/juice.jpeg',
-                  title: 'Lucid Dreams',
-                  subtitle: 'Juice WRLD • Album',
-                  size: 120),
-              SongItem(
-                  imagePath: 'assets/xxt.jpeg',
-                  title: 'then',
-                  subtitle: 'Playlist • khal',
-                  size: 120),
+                imagePath: 'assets/xxt.jpeg',
+                title: 'Your Favourite Song',
+                subtitle: 'playlist',
+                size: 120,
+                showBookmark: false,
+                onTap: () {
+                  Get.to(FavMusic());
+                },
+              ),
             ],
           ),
         ],
