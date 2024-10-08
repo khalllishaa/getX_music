@@ -30,7 +30,7 @@ class XXXTENTACIONPage extends StatelessWidget {
                       children: [
                         ProfilePicture(
                           size: 150,
-                          imagePath: 'assets/profile.jpeg',
+                          imagePath: 'assets/xxt.jpeg',
                         ),
                         SizedBox(width: 10),
                         Column(
@@ -143,6 +143,39 @@ class XXXTENTACIONPage extends StatelessWidget {
                       onTapIcon: () {
                         FavSongModel favSong = FavSongModel(
                           title: "I Dont Wanna Do This Anymore",
+                          artist: "XXXTENTACION",
+                          image: "assets/xxt.jpeg",
+                        );
+                        if (favSongController.isFavSong(favSong)) {
+                          Get.snackbar(
+                            'Already in Favorites!',
+                            '${favSong.title} by ${favSong.artist} is already in your favorites!',
+                            colorText: colorWhite,
+                            snackPosition: SnackPosition.BOTTOM,
+                            duration: Duration(seconds: 2),
+                          );
+                        } else {
+                          favSongController.addFavSong(favSong);
+                          Get.snackbar(
+                            'Song Liked!',
+                            'Added ${favSong.title} by ${favSong.artist} to your Favorite!',
+                            colorText: colorWhite,
+                            snackPosition: SnackPosition.BOTTOM,
+                            duration: Duration(seconds: 1),
+                          );
+                        }
+                      },
+                    ),
+                    SongItem(
+                      imagePath: 'assets/xxt.jpeg',
+                      title: 'Jocelyn Flores',
+                      subtitle: 'xxxtentacion',
+                      size: 50,
+                      showBookmark: true,
+                      onTap: (){},
+                      onTapIcon: () {
+                        FavSongModel favSong = FavSongModel(
+                          title: "Jocelyn Flores",
                           artist: "XXXTENTACION",
                           image: "assets/xxt.jpeg",
                         );
