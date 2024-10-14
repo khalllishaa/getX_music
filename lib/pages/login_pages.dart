@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_music/reused/color.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
@@ -22,6 +27,7 @@ class LoginPage extends StatelessWidget {
                   Image.asset(
                     'assets/music.jpg',
                     width: screenWidth * 0.45,
+                    fit: BoxFit.contain,
                   ),
                   SizedBox(height: screenHeight * 0.02),
                   Text(
