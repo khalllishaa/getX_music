@@ -127,7 +127,7 @@ class Collection extends StatelessWidget {
               Container(
                 child: InkWell(
                   onTap: () {
-                    Get.to(() => FavMusic()); // Pindah ke halaman XXXTENTACION
+                    Get.to(() => FavMusic());
                   },
                   child: SongItem(
                     imagePath: 'assets/xxt.jpeg',
