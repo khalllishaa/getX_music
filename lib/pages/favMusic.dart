@@ -55,30 +55,30 @@ class FavMusic extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child:
                 Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            favSong.title,
-                            style: TextStyle(
-                                color: colorWhite,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 2.0),
-                          Text(
-                            favSong.artist,
-                            style: TextStyle(
-                                color: colorWhite,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ],
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              favSong.title,
+                              style: TextStyle(
+                                  color: colorWhite,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 2.0),
+                            Text(
+                              favSong.artist,
+                              style: TextStyle(
+                                  color: colorWhite,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ]
+                    ]
                 ),
               ),
               Align(

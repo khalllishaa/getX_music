@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_music/controller/bottom_nav_ctr.dart';
-import 'package:getx_music/pages/favMusic.dart';
 import 'package:getx_music/pages/menu/home.dart';
 import 'package:getx_music/pages/menu/music.dart';
 import 'package:getx_music/pages/menu/search.dart';

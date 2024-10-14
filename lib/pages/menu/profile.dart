@@ -15,68 +15,68 @@ class Profile extends StatelessWidget {
         children: [
           SizedBox(height: 25),
           Padding(
-          padding: const EdgeInsets.symmetric(vertical: 30.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  ProfilePicture(
-                    size: 180,
-                    imagePath: 'assets/profile.jpeg',
-                  ),
-                  SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Khal',
-                        style: TextStyle(
-                          color: colorWhite,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    ProfilePicture(
+                      size: 180,
+                      imagePath: 'assets/profile.jpeg',
+                    ),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Khal',
+                          style: TextStyle(
+                            color: colorWhite,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        '4 Public Playlists • 21 Following',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey,
+                        SizedBox(height: 5),
+                        Text(
+                          '4 Public Playlists • 21 Following',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: colorTransparent,
-                              side: BorderSide(color: colorFont, width: 1.0),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: colorTransparent,
+                                side: BorderSide(color: colorFont, width: 1.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              child: Text(
+                                'Edit',
+                                style: TextStyle(color: colorWhite),
+                              ),
                             ),
-                            child: Text(
-                              'Edit',
-                              style: TextStyle(color: colorWhite),
+                            SizedBox(width: 10),
+                            IconButton(
+                              icon: Icon(Icons.more_vert, color: colorWhite),
+                              onPressed: () {},
                             ),
-                          ),
-                          SizedBox(width: 10),
-                          IconButton(
-                            icon: Icon(Icons.more_vert, color: colorWhite),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-        ),
           Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,16 +91,16 @@ class Profile extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 SongItem(
-                    imagePath: 'assets/xxt.jpeg',
-                    title: 'Everybody Dies In Their Nightmares',
-                    subtitle: 'xxxtentacion',
-                    size: 50, onTap: () {  },
+                  imagePath: 'assets/xxt.jpeg',
+                  title: 'Everybody Dies In Their Nightmares',
+                  subtitle: 'xxxtentacion',
+                  size: 50, onTap: () {  },
                 ),
                 SongItem(
-                    imagePath: 'assets/juice.jpeg',
-                    title: 'All the girls are same',
-                    subtitle: 'Juice WRLD',
-                    size: 50, onTap: () {  },
+                  imagePath: 'assets/juice.jpeg',
+                  title: 'All the girls are same',
+                  subtitle: 'Juice WRLD',
+                  size: 50, onTap: () {  },
                 ),
               ],
             ),

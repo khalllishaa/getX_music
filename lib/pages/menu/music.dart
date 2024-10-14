@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -126,7 +127,7 @@ class Collection extends StatelessWidget {
               Container(
                 child: InkWell(
                   onTap: () {
-                    Get.to(() => FavMusic()); // Pindah ke halaman XXXTENTACION
+                    Get.to(() => FavMusic());
                   },
                   child: SongItem(
                     imagePath: 'assets/xxt.jpeg',
@@ -141,8 +142,8 @@ class Collection extends StatelessWidget {
                 ),
               ),
               SongItem(
-                imagePath: 'assets/xxt.jpeg',
-                title: 'Your Favourite Song',
+                imagePath: 'assets/juice.jpeg',
+                title: 'Then',
                 subtitle: 'playlist',
                 size: 120,
                 showBookmark: false,
