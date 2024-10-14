@@ -7,9 +7,12 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(screenWidth * 0.05),
         child: Column(
           children: [
             Expanded(
@@ -18,16 +21,17 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/music.jpg',
-                    width: 170,
+                    width: screenWidth * 0.45,
                   ),
+                  SizedBox(height: screenHeight * 0.02),
                   Text(
                     'Yumi',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: colorFont
+                      fontWeight: FontWeight.bold,
+                      fontSize: screenWidth * 0.05,
+                      color: colorFont,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -35,7 +39,7 @@ class LoginPage extends StatelessWidget {
               TextSpan(
                 text: 'Feel the ',
                 style: TextStyle(
-                  fontSize: 34,
+                  fontSize: screenWidth * 0.09,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -52,16 +56,17 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               ),
+              textAlign: TextAlign.center,
             ),
-            SizedBox(height: 50),
+            SizedBox(height: screenHeight * 0.07),
             ElevatedButton(
               onPressed: () {
                 Get.toNamed('/register');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: colorBackground,
-                minimumSize: Size(370, 50),
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                minimumSize: Size(screenWidth * 0.9, screenHeight * 0.06),
+                padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08, vertical: screenHeight * 0.015),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -69,12 +74,12 @@ class LoginPage extends StatelessWidget {
               child: Text(
                 "Start",
                 style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white, // Warna teks
+                  fontSize: screenWidth * 0.045,
+                  color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: screenHeight * 0.03),
           ],
         ),
       ),
