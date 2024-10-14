@@ -4,39 +4,31 @@ import 'package:getx_music/reused/circle.dart';
 import 'package:getx_music/reused/color.dart';
 import 'package:getx_music/reused/songs.dart';
 
-class Profile extends StatefulWidget {
+class Profile extends StatelessWidget {
   const Profile({super.key});
 
   @override
-  State<Profile> createState() => _ProfileState();
-}
-
-class _ProfileState extends State<Profile> {
-  @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(screenWidth * 0.05),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: screenHeight * 0.03),
+              SizedBox(height: 25),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: screenHeight * 0.02),
+                padding: const EdgeInsets.symmetric(vertical: 30.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
                         ProfilePicture(
-                          size: screenHeight * 0.16,
+                          size: 100, // Menyesuaikan ukuran gambar profil
                           imagePath: 'assets/profile.jpeg',
                         ),
-                        SizedBox(width: screenWidth * 0.03),
+                        SizedBox(width: 10),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -44,19 +36,19 @@ class _ProfileState extends State<Profile> {
                               'Khal',
                               style: TextStyle(
                                 color: colorWhite,
-                                fontSize: screenWidth * 0.06,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: screenHeight * 0.01),
+                            SizedBox(height: 5),
                             Text(
                               '4 Public Playlists • 21 Following',
                               style: TextStyle(
-                                fontSize: screenWidth * 0.03,
+                                fontSize: 12,
                                 color: Colors.grey,
                               ),
                             ),
-                            SizedBox(height: screenHeight * 0.015),
+                            SizedBox(height: 10),
                             Row(
                               children: [
                                 ElevatedButton(
@@ -67,17 +59,14 @@ class _ProfileState extends State<Profile> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: screenWidth * 0.04,
-                                      vertical: screenHeight * 0.01,
-                                    ),
+                                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                                   ),
                                   child: Text(
                                     'Edit',
                                     style: TextStyle(color: colorWhite),
                                   ),
                                 ),
-                                SizedBox(width: screenWidth * 0.03),
+                                SizedBox(width: 10),
                                 IconButton(
                                   icon: Icon(Icons.more_vert, color: colorWhite),
                                   onPressed: () {},
@@ -95,121 +84,98 @@ class _ProfileState extends State<Profile> {
                 'Top tracks this month',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: screenWidth * 0.05,
+                  fontSize: 20,
                   color: colorWhite,
                 ),
               ),
-              SizedBox(height: screenHeight * 0.01),
+              SizedBox(height: 10),
               SongItem(
                 imagePath: 'assets/xxt.jpeg',
                 title: 'Everybody Dies In Their Nightmares',
                 subtitle: 'xxxtentacion',
-                size: screenHeight * 0.065,
-                onTap: () {},
+                size: 50, onTap: () {  },
               ),
               SongItem(
                 imagePath: 'assets/juice.jpeg',
                 title: 'All the girls are same',
                 subtitle: 'Juice WRLD',
-                size: screenHeight * 0.065,
-                onTap: () {},
+                size: 50, onTap: () {  },
               ),
-              SizedBox(height: screenHeight * 0.03),
+              SizedBox(height: 20), // Menambahkan ruang antara bagian
               Text(
                 'Top artist this month',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: screenWidth * 0.05,
+                  fontSize: 20,
                   color: colorWhite,
                 ),
               ),
+              SizedBox(height: 10),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
                     Column(
                       children: [
-                        ProfilePicture(size: screenHeight * 0.14, imagePath: 'assets/xxt.jpeg'),
-                        SizedBox(height: screenHeight * 0.005),
+                        ProfilePicture(size: 100, imagePath: 'assets/xxt.jpeg'),
+                        SizedBox(height: 5),
                         Text(
                           'XXXTentacion',
                           style: TextStyle(
                             color: colorWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: screenWidth * 0.035,
+                            fontSize: 13,
                           ),
                         ),
                         Text(
                           'Artist',
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: screenWidth * 0.025,
+                            fontSize: 10,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(width: screenWidth * 0.03),
+                    SizedBox(width: 10),
                     Column(
                       children: [
-                        ProfilePicture(size: screenHeight * 0.14, imagePath: 'assets/juice.jpeg'),
-                        SizedBox(height: screenHeight * 0.005),
+                        ProfilePicture(size: 100, imagePath: 'assets/juice.jpeg'),
+                        SizedBox(height: 5),
                         Text(
                           'Juice WRLD',
                           style: TextStyle(
                             color: colorWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: screenWidth * 0.035,
+                            fontSize: 13,
                           ),
                         ),
                         Text(
                           'Artist',
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: screenWidth * 0.025,
+                            fontSize: 10,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(width: screenWidth * 0.03),
+                    SizedBox(width: 10),
                     Column(
                       children: [
-                        ProfilePicture(size: screenHeight * 0.14, imagePath: 'assets/xxt.jpeg'),
-                        SizedBox(height: screenHeight * 0.005),
+                        ProfilePicture(size: 100, imagePath: 'assets/xxt.jpeg'),
+                        SizedBox(height: 5),
                         Text(
                           'XXXTentacion',
                           style: TextStyle(
                             color: colorWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: screenWidth * 0.035,
+                            fontSize: 13,
                           ),
                         ),
                         Text(
                           'Artist',
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: screenWidth * 0.025,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(width: screenWidth * 0.03),
-                    Column(
-                      children: [
-                        ProfilePicture(size: screenHeight * 0.14, imagePath: 'assets/juice.jpeg'),
-                        SizedBox(height: screenHeight * 0.005),
-                        Text(
-                          'Juice Wrld',
-                          style: TextStyle(
-                            color: colorWhite,
-                            fontWeight: FontWeight.bold,
-                            fontSize: screenWidth * 0.035,
-                          ),
-                        ),
-                        Text(
-                          'Artist',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: screenWidth * 0.025,
+                            fontSize: 10,
                           ),
                         ),
                       ],
@@ -217,7 +183,6 @@ class _ProfileState extends State<Profile> {
                   ],
                 ),
               ),
-              SizedBox(height: screenHeight * 0.03),
             ],
           ),
         ),
