@@ -8,18 +8,14 @@ class Search extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.width;
-    var screenHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 60),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Mengubah width Container menjadi berdasarkan lebar layar
               Container(
-                width: screenWidth * 0.9, // 90% dari lebar layar
+                width: 400,
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 decoration: BoxDecoration(
                   color: colorBackground,
@@ -45,7 +41,7 @@ class Search extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: screenHeight * 0.02), // Jarak vertikal berdasarkan tinggi layar
+              SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
@@ -54,13 +50,13 @@ class Search extends StatelessWidget {
                     'Popular Today',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: screenWidth * 0.05, // Ukuran teks berdasarkan lebar layar
+                      fontSize: 20,
                       color: colorWhite,
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight * 0.01),
+              SizedBox(height: 10),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -69,33 +65,33 @@ class Search extends StatelessWidget {
                       imagePath: 'assets/xxt.jpeg',
                       text: 'My World 2.0',
                       subText: 'Justin Bieber',
-                      size: screenWidth * 0.35, // Ukuran kotak gambar berdasarkan lebar layar
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/juice.jpeg',
                       text: 'The Wizard Liz',
                       subText: 'The Wizard Liz',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/xxt.jpeg',
                       text: 'Dongeng Tidur',
                       subText: 'Irene Evita & Kukila',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/juice.jpeg',
                       text: 'Cry Baby',
                       subText: 'Lil Peep',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: screenHeight * 0.02),
+              SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
@@ -104,13 +100,13 @@ class Search extends StatelessWidget {
                     'Made For You',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: screenWidth * 0.05,
+                      fontSize: 20,
                       color: colorWhite,
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight * 0.01),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 3.3),
                 child: Column(
@@ -121,39 +117,39 @@ class Search extends StatelessWidget {
                           child: Explore(
                             imagePath: 'assets/xxt.jpeg',
                             text: 'XXXTENTACION',
-                            height: screenHeight * 0.1, // Tinggi Explore berdasarkan tinggi layar
-                            width: screenWidth * 0.4,
+                            height: 70.0,
+                            width: 190.0,
                           ),
                         ),
-                        SizedBox(width: screenWidth * 0.02),
+                        SizedBox(width: 10),
                         Expanded(
                           child: Explore(
                             imagePath: 'assets/juice.jpeg',
                             text: 'Lil Peep',
-                            height: screenHeight * 0.1,
-                            width: screenWidth * 0.4,
+                            height: 70.0,
+                            width: 190.0,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: screenHeight * 0.01),
+                    SizedBox(height: 10),
                     Row(
                       children: [
                         Expanded(
                           child: Explore(
                             imagePath: 'assets/juice.jpeg',
                             text: 'Juice WRLD',
-                            height: screenHeight * 0.1,
-                            width: screenWidth * 0.4,
+                            height: 70.0,
+                            width: 190.0,
                           ),
                         ),
-                        SizedBox(width: screenWidth * 0.02),
+                        SizedBox(width: 10),
                         Expanded(
                           child: Explore(
                             imagePath: 'assets/xxt.jpeg',
                             text: 'Lil Tjay',
-                            height: screenHeight * 0.1,
-                            width: screenWidth * 0.4,
+                            height: 70.0,
+                            width: 190.0,
                           ),
                         ),
                       ],
@@ -161,7 +157,7 @@ class Search extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: screenHeight * 0.02),
+              SizedBox(height: 20),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
@@ -170,7 +166,7 @@ class Search extends StatelessWidget {
                     'Browse Genres',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: screenWidth * 0.05,
+                      fontSize: 20,
                       color: colorWhite,
                     ),
                   ),
@@ -184,28 +180,28 @@ class Search extends StatelessWidget {
                       imagePath: 'assets/juice.jpeg',
                       text: 'My World 2.0',
                       subText: 'Justin Bieber',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/xxt.jpeg',
                       text: 'The Wizard Liz',
                       subText: 'The Wizard Liz',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/juice.jpeg',
                       text: 'Dongeng Tidur',
                       subText: 'Irene Evita & Kukila',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
-                    SizedBox(width: screenWidth * 0.04),
+                    SizedBox(width: 15),
                     ImageBox(
                       imagePath: 'assets/xxt.jpeg',
                       text: 'Cry Baby',
                       subText: 'Lil Peep',
-                      size: screenWidth * 0.35,
+                      size: 150.0,
                     ),
                   ],
                 ),

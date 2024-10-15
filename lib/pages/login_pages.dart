@@ -2,22 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_music/reused/color.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(screenWidth * 0.05),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             Expanded(
@@ -26,18 +18,16 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Image.asset(
                     'assets/music.jpg',
-                    width: screenWidth * 0.45,
-                    fit: BoxFit.contain,
+                    width: 170,
                   ),
-                  SizedBox(height: screenHeight * 0.02),
                   Text(
                     'Yumi',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: screenWidth * 0.05,
-                      color: colorFont,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: colorFont
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
@@ -45,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
               TextSpan(
                 text: 'Feel the ',
                 style: TextStyle(
-                  fontSize: screenWidth * 0.09,
+                  fontSize: 34,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -62,17 +52,16 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-              textAlign: TextAlign.center,
             ),
-            SizedBox(height: screenHeight * 0.07),
+            SizedBox(height: 50),
             ElevatedButton(
               onPressed: () {
                 Get.toNamed('/register');
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: colorBackground,
-                minimumSize: Size(screenWidth * 0.9, screenHeight * 0.06),
-                padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.08, vertical: screenHeight * 0.015),
+                minimumSize: Size(370, 50),
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -80,12 +69,12 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 "Start",
                 style: TextStyle(
-                  fontSize: screenWidth * 0.045,
-                  color: Colors.white,
+                  fontSize: 18,
+                  color: Colors.white, // Warna teks
                 ),
               ),
             ),
-            SizedBox(height: screenHeight * 0.03),
+            SizedBox(height: 30),
           ],
         ),
       ),
