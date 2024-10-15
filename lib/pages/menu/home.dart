@@ -11,164 +11,181 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: screenHeight * 0.03),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04, vertical: screenHeight * 0.03),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ProfilePicture(
-                    imagePath: 'assets/profile.jpeg',
-                    size: screenHeight * 0.06,
-                  ),
-                  SizedBox(width: screenWidth * 0.05),
-                  Expanded(
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'hi, khal!',
-                        style: TextStyle(
-                          fontSize: screenHeight * 0.022,
-                          color: colorFont,
-                          fontWeight: FontWeight.bold,
-                        ),
+      body: Column(
+        children: [
+          SizedBox(height: 30),
+          // Header section
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ProfilePicture(
+                  imagePath: 'assets/profile.jpeg',
+                  size: 50.0,
+                ),
+                SizedBox(width: 20),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'hi, khal!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: colorFont,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: Icon(Icons.notifications, color: colorFont),
-                        onPressed: () {},
-                      ),
-                      SizedBox(width: screenWidth * 0.03),
-                      IconButton(
-                        icon: Icon(Icons.group_add, color: colorFont),
-                        onPressed: () {},
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.03),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          onTap: () {
-                            Get.to(() => XXXTENTACIONPage());
-                          },
-                          child: Explore(
-                            imagePath: 'assets/xxt.jpeg',
-                            text: 'XXXTENTACION',
-                            height: screenHeight * 0.09,
-                            width: screenWidth * 0.45,
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: screenWidth * 0.03),
-                      Expanded(
-                        child: Explore(
-                          imagePath: 'assets/juice.jpeg',
-                          text: 'Lil Peep',
-                          height: screenHeight * 0.09,
-                          width: screenWidth * 0.45,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: screenHeight * 0.02),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Explore(
-                          imagePath: 'assets/juice.jpeg',
-                          text: 'Juice WRLD',
-                          height: screenHeight * 0.09,
-                          width: screenWidth * 0.45,
-                        ),
-                      ),
-                      SizedBox(width: screenWidth * 0.03),
-                      Expanded(
-                        child: Explore(
-                          imagePath: 'assets/xxt.jpeg',
-                          text: 'Lil Tjay',
-                          height: screenHeight * 0.09,
-                          width: screenWidth * 0.45,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.03),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: EdgeInsets.only(left: screenWidth * 0.03),
-                child: Text(
-                  'Made For You',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: screenHeight * 0.025,
-                    color: colorWhite,
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: screenHeight * 0.01),
-            SizedBox(
-              height: screenHeight * 0.35,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+                Row(
                   children: [
-                    SizedBox(width: screenWidth * 0.02),
-                    ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
-                      text: 'My World 2.0',
-                      subText: 'Justin Bieber',
-                      size: screenWidth * 0.35,
+                    IconButton(
+                      icon: Icon(Icons.notifications, color: colorFont),
+                      onPressed: () {},
                     ),
-                    SizedBox(width: screenWidth * 0.04),
-                    ImageBox(
-                      imagePath: 'assets/juice.jpeg',
-                      text: 'The Wizard Liz',
-                      subText: 'The Wizard Liz',
-                      size: screenWidth * 0.35,
-                    ),
-                    SizedBox(width: screenWidth * 0.04),
-                    ImageBox(
-                      imagePath: 'assets/xxt.jpeg',
-                      text: 'Dongeng Tidur',
-                      subText: 'Irene Evita & Kukila',
-                      size: screenWidth * 0.35,
-                    ),
-                    SizedBox(width: screenWidth * 0.04),
-                    ImageBox(
-                      imagePath: 'assets/juice.jpeg',
-                      text: 'Cry Baby',
-                      subText: 'Lil Peep',
-                      size: screenWidth * 0.35,
+                    SizedBox(width: 10),
+                    IconButton(
+                      icon: Icon(Icons.group_add, color: colorFont),
+                      onPressed: () {},
                     ),
                   ],
                 ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 3.3),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => XXXTENTACIONPage()); // Pindah ke halaman XXXTENTACION
+                        },
+                        child: Explore(
+                          imagePath: 'assets/xxt.jpeg',
+                          text: 'XXXTENTACION',
+                          height: 70.0,
+                          width: 190.0,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Explore(
+                        imagePath: 'assets/juice.jpeg',
+                        text: 'Lil Peep',
+                        height: 70.0,
+                        width: 190.0,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Explore(
+                        imagePath: 'assets/juice.jpeg',
+                        text: 'Juice WRLD',
+                        height: 70.0,
+                        width: 190.0,
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Explore(
+                        imagePath: 'assets/xxt.jpeg',
+                        text: 'Lil Tjay',
+                        height: 70.0,
+                        width: 190.0,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Explore(
+                        imagePath: 'assets/xxt.jpeg',
+                        text: 'then',
+                        height: 70.0,
+                        width: 190.0,
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Explore(
+                        imagePath: 'assets/juice.jpeg',
+                        text: 'ASAP Rocky',
+                        height: 70.0,
+                        width: 190.0,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Text(
+                'Made For You',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: colorWhite,
+                ),
               ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(height: 10),
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 5),
+                  ImageBox(
+                    imagePath: 'assets/xxt.jpeg',
+                    text: 'My World 2.0',
+                    subText: 'Justin Bieber',
+                    size: 150.0,
+                  ),
+                  SizedBox(width: 15),
+                  ImageBox(
+                    imagePath: 'assets/juice.jpeg',
+                    text: 'The Wizard Liz',
+                    subText: 'The Wizard Liz',
+                    size: 150.0,
+                  ),
+                  SizedBox(width: 15),
+                  ImageBox(
+                    imagePath: 'assets/xxt.jpeg',
+                    text: 'Dongeng Tidur',
+                    subText: 'Irene Evita & Kukila',
+                    size: 150.0,
+                  ),
+                  SizedBox(width: 15),
+                  ImageBox(
+                    imagePath: 'assets/juice.jpeg',
+                    text: 'Cryy Baby',
+                    subText: 'Lil Peep',
+                    size: 150.0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
